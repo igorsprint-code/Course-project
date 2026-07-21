@@ -13,8 +13,10 @@
 
 # Создание инфраструктуры в Яндекс Клауд с использованием Terraform.
 
-В файле [network.tf](/terraform/network.tf)
+Файл [network.tf](/terraform/network.tf) содержит конфигурацию сетевых компонентов:
 
+- Сеть "project_net", подсети "project_a" и "project_b" расположенных в разных зонах "ru-central1-a" и "ru-central1-b". 
+- 
 
 
 

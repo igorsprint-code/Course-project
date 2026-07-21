@@ -10,7 +10,7 @@
 
 - name: enable prometheus
   systemd:
-    name: node-exporter
+    name: prometheus
     enabled: yes
     masked: no
 

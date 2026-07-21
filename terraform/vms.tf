@@ -303,13 +303,7 @@ resource "local_file" "inventory" {
   [kibana_server:vars]
   ansible_ssh_common_args='-o ProxyCommand="ssh -p 22 -W %h:%p -q user@${yandex_compute_instance.bastion.network_interface.0.nat_ip_address}"'
 
-
-
-
-
-
- 
-
+  
   [webservers]
   ${yandex_compute_instance.web_1.network_interface.0.ip_address}
   ${yandex_compute_instance.web_2.network_interface.0.ip_address}

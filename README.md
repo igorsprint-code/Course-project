@@ -11,6 +11,14 @@
 ![scheme](screenshots/scheme.png)
 
 
+# Создание инфраструктуры в Яндекс Клауд с использованием Terraform.
+
+В файле [network.tf](/terraform/network.tf)
+
+
+
+
+
 
 
 

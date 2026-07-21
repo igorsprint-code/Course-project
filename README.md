@@ -25,6 +25,10 @@
 
 # Демонстрация работы Terraform
 
+Terraform отработал без ошибок:
+
+![terraformapply](/terraform/terraformapply.png)
+
 
 
 

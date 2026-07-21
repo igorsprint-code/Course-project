@@ -1,0 +1,30 @@
+    - name: install elasticsearch
+      apt:
+        deb: https://mirror.yandex.ru/mirrors/elastic/8/pool/main/e/elasticsearch/elasticsearch-8.12.2-amd64.deb
+        state: present
+
+    - name: enable elasticsearch
+      systemd:
+        name: elasticsearch.service
+        enabled: true
+
+
+    - name: start elasticsearch
+      systemd:
+        name: elasticsearch.service
+        state: started
+
+    
+    - name: config elastic
+      template:
+        src: elasticsearch.yml.j2
+        dest: /etc/elasticsearch/elasticsearch.yml
+        owner: root
+        group: elasticsearch
+        mode: 0660
+      notify: restart elasticsearch
+   
+        
+
+    
+    

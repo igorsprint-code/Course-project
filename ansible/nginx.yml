@@ -1,0 +1,6 @@
+- name: nginx
+  hosts: webservers
+  become: yes
+  
+  roles:
+    - nginx

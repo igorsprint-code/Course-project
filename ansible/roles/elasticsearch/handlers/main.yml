@@ -1,0 +1,15 @@
+- name: enable elasticsearch
+  systemd:
+    name: elasticsearch.service
+    enabled: true
+
+
+- name: start elasticsearch
+  systemd:
+    name: elasticsearch.service
+    state: started
+
+- name: restart elasticsearch
+  systemd:
+    name: elasticsearch.service
+    state: restarted

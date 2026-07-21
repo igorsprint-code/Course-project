@@ -1,0 +1,15 @@
+- name: enable filebeat
+  systemd:
+    name: filebeat.service
+    enabled: yes
+
+- name: start filebeat
+  systemd:
+    name: filebeat.service
+    state: started
+
+
+- name: restart filebeat
+  systemd:
+    name: filebeat.service
+    state: restarted

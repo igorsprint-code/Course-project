@@ -1,0 +1,26 @@
+
+- name: install grafana
+  apt:
+    deb: https://github.com/grafana/grafana/releases/download/v13.1.0/grafana_13.1.0_28013217238_linux_amd64.deb
+    state: present
+       
+- name: enable grafana
+  systemd:
+    name: grafana-server
+    enabled: yes
+
+- name: start grafana
+  systemd:
+    state: started
+    name: grafana-server
+
+- name: config grafana
+  template:
+    src: sample.yaml.j2
+    dest: /etc/grafana/provisioning/datasources/sample.yaml
+  notify: 
+    - restart grafana
+          
+
+    
+    

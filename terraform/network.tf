@@ -188,10 +188,9 @@ resource "yandex_vpc_security_group" "kibana" {
   network_id = yandex_vpc_network.project_net.id
   ingress {
     description    = "Allow 0.0.0.0/0"
-    protocol       = "ANY"
+    protocol       = "TCP"
     v4_cidr_blocks = ["0.0.0.0/0"]
-    from_port      = 0
-    to_port        = 65535
+    port           = 5601
   }
   egress {
     description    = "Permit ANY"

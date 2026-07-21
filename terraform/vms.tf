@@ -227,7 +227,7 @@ resource "yandex_compute_instance" "elasticsearch_vm" {
   network_interface {
     subnet_id          = yandex_vpc_subnet.project_a.id 
     nat                = false
-    security_group_ids = [yandex_vpc_security_group.LAN.id, yandex_vpc_security_group.elasticsearch.id]
+    security_group_ids = [yandex_vpc_security_group.LAN.id]
   }
 }
 

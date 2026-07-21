@@ -40,7 +40,7 @@
 
 - name: import dashboard
   copy:
-    src: ./files/dashboard.json
+    src: ./files/dashboard_threshold.json
     dest: /var/lib/grafana/dashboards/
     owner: grafana
     group: grafana

@@ -27,8 +27,8 @@ resource "yandex_alb_backend_group" "alb_bg" {
     port             = 80
     target_group_ids = ["${yandex_alb_target_group.target-group.id}"]
     healthcheck {
-      timeout  = "1s"
-      interval = "1s"
+      timeout  = "10s"
+      interval = "60s"
       http_healthcheck {
         path = "/"
       }

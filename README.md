@@ -4,6 +4,8 @@
 
 Файлы [Ansible](/ansible/)
 
+Grafana, KIbana [ip адреса](pub_ip.txt) 
+
 
 
 

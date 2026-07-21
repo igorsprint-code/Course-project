@@ -6,6 +6,9 @@
 
 ## Grafana, Kibana [ip адреса](pub_ip.txt) 
 
+### Схема инфраструктуры:
+
+![scheme](screenshots/scheme.png)
 
 
 

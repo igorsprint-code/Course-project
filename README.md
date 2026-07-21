@@ -1,10 +1,10 @@
 #  Курсовая работа на профессии "DevOps-инженер с нуля" Дедяхин Игорь
 
-### Файлы [Terraform](/terraform/)
+## Файлы [Terraform](/terraform/)
 
 ## Файлы [Ansible](/ansible/)
 
-# Grafana, Kibana [ip адреса](pub_ip.txt) 
+## Grafana, Kibana [ip адреса](pub_ip.txt) 
 
 
 

@@ -21,7 +21,7 @@
 
 Файл [balancer.tf](/terraform/balancer.tf) содержит описание Target group, с включеннымим в неё web-серверами, Backend group , HTTP router и Application load balancer. Настроен healthcheck.
 
-В файле [vms.tf](/terraform/vms.tf) определены ВМ: "bastion", "web_1", "web_2", "prometheus_vm", "grafana_vm", "elasticsearch_vm", "kibana_vm". Описаны подсети в которых они будут работать, железо, ОС,  назначены группы безопасности. Фалй так же содержит контсрукцию, позволяющую после создания инфрастурктуры записать в файл [hosts.ini](/ansible/hosts.ini) ip созданных ВМ, позже этот файл будет выполнять роль inventory-файла для ansible   
+В файле [vms.tf](/terraform/vms.tf) определены ВМ: "bastion", "web_1", "web_2", "prometheus_vm", "grafana_vm", "elasticsearch_vm", "kibana_vm". Описаны подсети в которых они будут работать, железо, ОС,  назначены группы безопасности. Файл так же содержит контсрукцию, позволяющую после создания инфрастурктуры записать в файл [hosts.ini](/ansible/hosts.ini) ip созданных ВМ, позже этот файл будет выполнять роль inventory-файла для ansible   
 
 
 

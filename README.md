@@ -63,6 +63,10 @@ Terraform отработал без ошибок:
 
 # Конфигурирование ВМ с использованием Ansible.
 
+Файлы дл конфигурации логически разбиты на роли: [elasticsearch](/ansible/roles/elasticsearch),
+
+
+
 
 
 

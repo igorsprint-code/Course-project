@@ -58,6 +58,61 @@ Terraform отработал без ошибок:
 ![console](screenshots/consolesg.png)
 
 
+Всё готово к конфигурированию ВМ с помощью Ansble.
+
+
+# Конфигурирование ВМ с использованием Ansible.
+
+Файлы для конфигурации логически разбиты на роли: [elasticsearch](/ansible/roles/elasticsearch), [filebeat](/ansible/roles/filebeat), [grafana](/ansible/roles/grafana), [kibana](/ansible/roles/kibana), [nginx](/ansible/roles/nginx), [nginx_log_exporter](/ansible/roles/nginx_log_exporter), [node_exporter](/ansible/roles/node_exporter), [prometheus](/ansible/roles/prometheus)
+
+Роли содержат необходимые задания, обработчики, файлы конфигурации и шаблоны j2.
+Необходимые ip после завершения работы terraform внесены в файл [hosts.ini](/ansible/hosts.ini)
+Подключение по ssh к ВМ осуществляется через bastion-сервер.
+
+
+# Демонстрация работы Ansible
+
+## Web-сервера
+
+Плейбук nginx.yml  устанвливает и настраивает  nginx, заменяет стартовую страницу. 
+
+Ansible отработал без ошибок:
+
+![ansible](screenshots/ansnginx.png)
+
+На web-сервере работает nginx, прослушивается порт 80:
+
+![ansible](screenshots/ansnginxsys.png)
+
+
+В барузере по адресу балансировщика види стартовую страницу с одного и второго сервера. Балансировщик работает!
+
+
+![ansible](screenshots/alb.png)
+
+Cтатус сменился на HEALTHY.
+
+![ansible](screenshots/healthy.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

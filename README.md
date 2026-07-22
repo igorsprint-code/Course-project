@@ -58,6 +58,12 @@ Terraform отработал без ошибок:
 ![console](screenshots/consolesg.png)
 
 
+Всё готово к конфигурированию ВМ с помощью Ansble.
+
+
+# Конфигурирование ВМ с использованием Ansible.
+
+
 
 
 

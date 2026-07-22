@@ -44,6 +44,21 @@ Terraform отработал без ошибок:
 
 ![console](screenshots/consolesnap.png)
 
+Создан балансировщик, HTTP роутер, группа бэкендов, целевая группа:
+
+![console](screenshots/consolealb.png)
+
+
+Проверка состояния (статус UNHEALTHY, т.к. nginx пока не установлен):
+
+![console](screenshots/consoleweb.png)
+
+Созданы группы безопасности:
+
+![console](screenshots/consolesg.png)
+
+
+
 
 
 

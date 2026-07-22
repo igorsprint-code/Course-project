@@ -65,6 +65,9 @@ Terraform отработал без ошибок:
 
 Файлы для конфигурации логически разбиты на роли: [elasticsearch](/ansible/roles/elasticsearch), [filebeat](/ansible/roles/filebeat), [grafana](/ansible/roles/grafana), [kibana](/ansible/roles/kibana), [nginx](/ansible/roles/nginx), [nginx_log_exporter](/ansible/roles/nginx_log_exporter), [node_exporter](/ansible/roles/node_exporter), [prometheus](/ansible/roles/prometheus)
 
+Роли содержат необходимые задания, обработчики, файлы конфигурации и шаблоны j2.
+Необходимые ip после завершения работы terraform внесены в файл [hosts.ini](/ansible/hosts.ini)
+
 
 
 

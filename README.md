@@ -166,7 +166,7 @@ Grafana работает на 62.84.114.98:3000 (login:admin password:admin) и 
 
 Дашборды так же присутствуют:
 
-[ansible](screenshots/grafanadashboard.png)
+![ansible](screenshots/grafanadashboard.png)
 
 
 

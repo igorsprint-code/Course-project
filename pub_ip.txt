@@ -1,0 +1,8 @@
+   
+[grafana_server]
+62.84.114.98
+  
+ 
+[kibana_server]
+46.21.245.86
+ 

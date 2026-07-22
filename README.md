@@ -74,7 +74,7 @@ Terraform отработал без ошибок:
 
 ## Web-сервера
 
-Плейбук nginx.yml  устанвливает и настраивает  nginx, заменяет стартовую страницу. 
+### Плейбук nginx.yml  устанавливает и настраивает  nginx, заменяет стартовую страницу. 
 
 Ansible отработал без ошибок:
 
@@ -85,7 +85,7 @@ Ansible отработал без ошибок:
 ![ansible](screenshots/ansnginxsys.png)
 
 
-В барузере по адресу балансировщика види стартовую страницу с одного и второго сервера. Балансировщик работает!
+В браузере по адресу балансировщика 158.160.238.90 видим стартовую страницу с одного и второго сервера. Балансировщик работает!
 
 
 ![ansible](screenshots/alb.png)
@@ -93,6 +93,51 @@ Ansible отработал без ошибок:
 Cтатус сменился на HEALTHY.
 
 ![ansible](screenshots/healthy.png)
+
+
+### Плейбук node_exporter.yml  создает необходимые каталоги, скачивает, устанавливает node_exporter, создает systemd-сервис.
+
+Ansible отработал без ошибок:
+
+![ansible](screenshots/nodeex.png)
+
+На web-сервере работает node exporter, прослушивается порт 9100:
+
+![ansible](screenshots/nodeexsys.png)
+
+
+### Плейбук log_exporter.yml скачивает, устанавливает nginx_log_exporter.
+
+Ansible отработал без ошибок:
+
+![ansible](screenshots/logex.png)
+
+
+На web-сервере работает log_exporter, прослушивается порт 4040:
+
+![ansible](screenshots/logexsys.png)
+
+
+### Плейбук filebeat.yml скачивает, устанавливает filebeat, шаблон j2 подставляет в настройках ip адрес вм, на которою будет установлен elasticsearch.
+
+Ansible отработал без ошибок:
+
+![ansible](screenshots/filebeat.png)
+
+
+На web-сервере работает ilebeat.
+
+![ansible](screenshots/filebeatsys.png)
+
+
+
+
+
+
+
+
+
+
 
 
 

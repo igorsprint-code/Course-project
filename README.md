@@ -4,7 +4,7 @@
 
 ## Файлы [Ansible](/ansible/)
 
-## Grafana, Kibana актуальные [ip адреса](pub_ip.txt) 
+## Grafana, Kibana [ip адреса](pub_ip.txt) 
 
 ### Схема инфраструктуры:
 

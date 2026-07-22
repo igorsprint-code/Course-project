@@ -29,7 +29,7 @@
 
 Terraform отработал без ошибок:
 
-![terraformapply](/terraform/terraformapply.png)
+![terraformapply](screenshots/terraformapply.png)
 
 
 

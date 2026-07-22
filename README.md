@@ -125,9 +125,57 @@ Ansible отработал без ошибок:
 ![ansible](screenshots/filebeat.png)
 
 
-На web-сервере работает ilebeat.
+На web-сервере работает filebeat.
 
 ![ansible](screenshots/filebeatsys.png)
+
+
+## Prometheus-сервер
+
+### Плейбук prometheus.yml создает необходимую группу и пользователя, каталоги, скачивает и устанавливает prometheus, создает systemd-сервис, с помощью шаблона добавляет в настройки таргеты на web-сервера.
+
+
+Ansible отработал без ошибок:
+
+![ansible](screenshots/prom.png)
+
+
+На сервере работает Prometheus, прослушивается порт 9090:
+
+![ansible](screenshots/promsys.png)
+
+
+## Grafana-сервер
+
+### Плейбук grafana.yml скачивает и устанавливает grafana, c помощью шаблона j2  добавляет ip адрес Prometheus-сервера в настройки, добавляет дашборд (они были созданы вручную и экспортированы в json для повторного использования)
+
+
+Ansible отработал без ошибок:
+
+![ansible](screenshots/grafana.png)
+
+На сервере работает Grafana, прослушивается порт 3000:
+
+![ansible](screenshots/grafanasys.png)
+
+
+Grafana работает на 62.84.114.98:3000 (login:admin password:admin) и уже собирает метрики с web-серверов. 
+
+
+![ansible](screenshots/grafanaweb.png)
+
+Дашборды так же присутствуют:
+
+[ansible](screenshots/grafanadashboard.png)
+
+
+
+
+
+
+
+
+
 
 
 

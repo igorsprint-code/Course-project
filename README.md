@@ -63,7 +63,7 @@ Terraform отработал без ошибок:
 
 # Конфигурирование ВМ с использованием Ansible.
 
-Файлы дл конфигурации логически разбиты на роли: [elasticsearch](/ansible/roles/elasticsearch),
+Файлы для конфигурации логически разбиты на роли: [elasticsearch](/ansible/roles/elasticsearch), [filebeat](/ansible/roles/filebeat), [grafana](/ansible/roles/grafana), [kibana](/ansible/roles/kibana), [nginx](/ansible/roles/nginx), [nginx_log_exporter](/ansible/roles/nginx_log_exporter), [node_exporter](/ansible/roles/node_exporter), [prometheus](/ansible/roles/prometheus)
 
 
 

@@ -159,7 +159,7 @@ Ansible отработал без ошибок:
 ![ansible](screenshots/grafanasys.png)
 
 
-Grafana работает на 62.84.114.98:3000 (login:admin password:admin) и уже собирает метрики с web-серверов. 
+Grafana доступна по ip 62.84.114.98:3000 (login:admin password:admin) и уже собирает метрики с web-серверов. 
 
 
 ![ansible](screenshots/grafanaweb.png)
@@ -167,6 +167,45 @@ Grafana работает на 62.84.114.98:3000 (login:admin password:admin) и 
 Дашборды так же присутствуют:
 
 ![ansible](screenshots/grafanadashboard.png)
+
+
+## Elasticsearch-сервер
+
+### Плейбук elasticsearch.yml скачивает и устанавливает elasticsearch, настраивает c помощью шаблона j2.
+
+Ansible отработал без ошибок:
+
+![ansible](screenshots/elastic.png)
+
+На сервере работает Elasticsearch, прослушивается порт 9200:
+
+![ansible](screenshots/elasticsys.png)
+
+
+## Kibana-сервер
+
+### Плейбук kibana.yml скачивает и устанавливает kibana, настраивает c помощью шаблона j2.
+
+
+Ansible отработал без ошибок:
+
+![ansible](screenshots/kibana.png)
+
+На сервере работает Kibana, прослушивается порт 5601:
+
+![ansible](screenshots/kibanasys.png)
+
+Kibana доступна по ip 46.21.245.86:5601 и получает данные о elasticsearch:
+
+![ansible](screenshots/kibanaweb.png)
+
+![ansible](screenshots/kibanaweb2.png)
+
+
+
+
+
+
 
 
 

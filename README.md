@@ -32,6 +32,23 @@ Terraform отработал без ошибок:
 ![terraformapply](screenshots/terraformapply.png)
 
 
+Созданы все необхдимые ВМ:
+
+![console](screenshots/consolevm.png)
+
+Создан сеть, подсеть и таблица маршрутизации:
+
+![console](screenshots/consolenet.png)
+
+Создано расписание создания снимков дисков:
+
+![console](screenshots/consolesnap.png)
+
+
+
+
+
+
 
 
 

@@ -26,7 +26,7 @@ resource "yandex_compute_instance" "bastion" {
   }
 
   metadata = {
-    user-data          = file("./cloud-init.yml")
+    user-data          = templatefile ("./cloud-init.yml", {ssh_public_key = var.ssh_public_key})
     serial-port-enable = 1
   }
 
@@ -65,7 +65,7 @@ resource "yandex_compute_instance" "web_1" {
   }
 
   metadata = {
-    user-data          = file("./cloud-init.yml")
+    user-data          = templatefile ("./cloud-init.yml", {ssh_public_key = var.ssh_public_key})
     serial-port-enable = 1
   }
 
@@ -102,7 +102,7 @@ resource "yandex_compute_instance" "web_2" {
   }
 
   metadata = {
-    user-data          = file("./cloud-init.yml")
+    user-data          = templatefile ("./cloud-init.yml", {ssh_public_key = var.ssh_public_key})
     serial-port-enable = 1
   }
 
@@ -142,7 +142,7 @@ resource "yandex_compute_instance" "prometheus_vm" {
   }
 
   metadata = {
-    user-data          = file("./cloud-init.yml")
+    user-data          = templatefile ("./cloud-init.yml", {ssh_public_key = var.ssh_public_key})
     serial-port-enable = 1
   }
 
@@ -180,7 +180,7 @@ resource "yandex_compute_instance" "grafana_vm" {
   }
 
   metadata = {
-    user-data          = file("./cloud-init.yml")
+    user-data          = templatefile ("./cloud-init.yml", {ssh_public_key = var.ssh_public_key})
     serial-port-enable = 1
   }
 
@@ -218,7 +218,7 @@ resource "yandex_compute_instance" "elasticsearch_vm" {
   }
 
   metadata = {
-    user-data          = file("./cloud-init.yml")
+    user-data          = templatefile ("./cloud-init.yml", {ssh_public_key = var.ssh_public_key})
     serial-port-enable = 1
   }
 
@@ -256,7 +256,7 @@ resource "yandex_compute_instance" "kibana_vm" {
   }
 
   metadata = {
-    user-data          = file("./cloud-init.yml")
+    user-data          = templatefile ("./cloud-init.yml", {ssh_public_key = var.ssh_public_key})
     serial-port-enable = 1
   }
 

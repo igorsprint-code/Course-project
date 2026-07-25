@@ -1,0 +1,15 @@
+cluster.name: YC_cluster
+node.name: node-1
+path.data: /var/lib/elasticsearch
+path.logs: /var/log/elasticsearch
+network.host: 0.0.0.0
+http.port: 9200
+
+discovey.type: single-node
+
+xpack.security.enabled: false
+xpack.security.http.ssl.enabled: false
+xpack.security.transport.ssl.enabled: false
+
+cluster.initial_master_nodes: ["node-1"]
+

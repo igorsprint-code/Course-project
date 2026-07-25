@@ -6,4 +6,4 @@ users:
     shell: /bin/bash
     sudo: ["ALL=(ALL) NOPASSWD:ALL"]
     ssh_authorized_keys:
-      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFeD+THrvGobFwnMEiSRg5RyEOAVgdwolx2CNQIsGee4 igor@pc
+      - ${ssh_public_key}

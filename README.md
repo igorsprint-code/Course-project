@@ -25,6 +25,35 @@
 
 В файле [snapshot.tf](/terraform/snapshot.tf) описона порядок создания  snapshot дисков всех ВМ.
 
+
+Развертывание с чистого окружения:
+
+В каталоге с terraform проверяем форматирование файлов terraform:
+
+![terraformclear](screenshots/clear/check.png)
+
+Terraform init:
+
+![terraformclear](screenshots/clear/init.png)
+
+Terraform validate:
+
+![terraformclear](screenshots/clear/validate.png)
+
+Terraform plan:
+
+![terraformclear](screenshots/clear/plan.png)
+
+Terraform apply:
+
+![terraformclear](screenshots/clear/apply.png)
+
+Terraform output:
+
+![terraformclear](screenshots/clear/output.png)
+
+
+
 # Демонстрация работы Terraform
 
 Terraform отработал без ошибок:

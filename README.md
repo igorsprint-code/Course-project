@@ -246,7 +246,7 @@ Ansible отработал без ошибок:
 
 ![ansible](screenshots/kibanasys.png)
 
-Kibana доступна по ip 46.21.245.86:5601 и получает данные от elasticsearch:
+Kibana доступна  и получает данные от elasticsearch:
 
 ![ansible](screenshots/kibanaweb.png)
 

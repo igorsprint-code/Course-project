@@ -101,6 +101,18 @@ Terraform отработал без ошибок:
 
 # Демонстрация работы Ansible
 
+В каталоге ansible проверяем доступ к вм ansible all -m ping:
+
+![ansibleclear](screenshots/clear/ping.png)
+
+Проверяем синтаксис файлов:
+
+![ansibleclear](screenshots/clear/checkans.png)
+
+
+
+
+
 ## Web-сервера
 
 ### Плейбук nginx.yml  устанавливает и настраивает  nginx, заменяет стартовую страницу. 

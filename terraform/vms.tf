@@ -35,7 +35,7 @@ resource "yandex_compute_instance" "bastion" {
   network_interface {
     subnet_id          = yandex_vpc_subnet.project_a.id 
     nat                = true
-    security_group_ids = [yandex_vpc_security_group.LAN.id, yandex_vpc_security_group.bastion.id]
+    security_group_ids = [yandex_vpc_security_group.bastion.id]
   }
 }
 
@@ -74,7 +74,7 @@ resource "yandex_compute_instance" "web_1" {
   network_interface {
     subnet_id          = yandex_vpc_subnet.project_a.id
     nat                = false
-    security_group_ids = [yandex_vpc_security_group.LAN.id, yandex_vpc_security_group.web_fw.id]
+    security_group_ids = [yandex_vpc_security_group.web_fw.id]
   }
 }
 
@@ -111,7 +111,7 @@ resource "yandex_compute_instance" "web_2" {
   network_interface {
     subnet_id          = yandex_vpc_subnet.project_b.id
     nat                = false
-    security_group_ids = [yandex_vpc_security_group.LAN.id, yandex_vpc_security_group.web_fw.id]
+    security_group_ids = [yandex_vpc_security_group.web_fw.id]
 
   }
 }
@@ -151,7 +151,7 @@ resource "yandex_compute_instance" "prometheus_vm" {
   network_interface {
     subnet_id          = yandex_vpc_subnet.project_a.id 
     nat                = false
-    security_group_ids = [yandex_vpc_security_group.LAN.id]
+    security_group_ids = [yandex_vpc_security_group.prometheus.id]
   }
 }
 
@@ -189,7 +189,7 @@ resource "yandex_compute_instance" "grafana_vm" {
   network_interface {
     subnet_id          = yandex_vpc_subnet.project_a.id 
     nat                = true
-    security_group_ids = [yandex_vpc_security_group.LAN.id, yandex_vpc_security_group.grafana.id]
+    security_group_ids = [yandex_vpc_security_group.grafana.id]
   }
 }
 
@@ -227,7 +227,7 @@ resource "yandex_compute_instance" "elasticsearch_vm" {
   network_interface {
     subnet_id          = yandex_vpc_subnet.project_a.id 
     nat                = false
-    security_group_ids = [yandex_vpc_security_group.LAN.id]
+    security_group_ids = [yandex_vpc_security_group.elasticsearch.id]
   }
 }
 
@@ -265,7 +265,7 @@ resource "yandex_compute_instance" "kibana_vm" {
   network_interface {
     subnet_id          = yandex_vpc_subnet.project_a.id 
     nat                = true
-    security_group_ids = [yandex_vpc_security_group.LAN.id, yandex_vpc_security_group.kibana.id]
+    security_group_ids = [yandex_vpc_security_group.kibana.id]
   }
 }
 

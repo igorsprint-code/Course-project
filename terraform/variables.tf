@@ -11,3 +11,9 @@ variable "ssh_public_key" {
   description = "Public SSH key"
   type        = string
 }
+
+
+variable "admin_ip" {
+  type          = string
+  default       = "5.18.149.32/32"
+}

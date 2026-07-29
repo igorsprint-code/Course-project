@@ -63,6 +63,7 @@ resource "yandex_alb_load_balancer" "my_alb" {
   name = "my-load-balancer"
 
   network_id = yandex_vpc_network.project_net.id
+  security_group_ids = [yandex_vpc_security_group.alb_sg.id]
 
   allocation_policy {
     location {

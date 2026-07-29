@@ -1,29 +1,28 @@
-    - name: install elasticsearch
-      apt:
-        deb: https://mirror.yandex.ru/mirrors/elastic/8/pool/main/e/elasticsearch/elasticsearch-8.12.2-amd64.deb
-        state: present
+- name: install elasticsearch
+  ansible.builtin.apt:
+    deb: https://mirror.yandex.ru/mirrors/elastic/8/pool/main/e/elasticsearch/elasticsearch-8.12.2-amd64.deb
+    state: present
 
-    - name: enable elasticsearch
-      systemd:
-        name: elasticsearch.service
-        enabled: true
+- name: enable elasticsearch
+  ansible.builtin.systemd:
+    name: elasticsearch.service
+    enabled: true
 
 
-    - name: start elasticsearch
-      systemd:
-        name: elasticsearch.service
-        state: started
+- name: start elasticsearch
+  ansible.builtin.systemd:
+    name: elasticsearch.service
+    state: started
 
     
-    - name: config elastic
-      copy:
-        src: ./files/elasticsearch.yml
-        dest: /etc/elasticsearch/elasticsearch.yml
-        owner: root
-        group: elasticsearch
-        mode: 0660
-
-      notify: restart elasticsearch
+- name: config elastic
+  ansible.builtin.copy:
+    src: ./files/elasticsearch.yml
+    dest: /etc/elasticsearch/elasticsearch.yml
+    owner: root
+    group: elasticsearch
+    mode: 0660
+  notify: restart elasticsearch
    
         
 

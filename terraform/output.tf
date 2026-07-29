@@ -39,3 +39,4 @@ output "kibana_pub" {
 output "kibana" {
   value =  yandex_compute_instance.kibana_vm.network_interface.0.ip_address
 }
+

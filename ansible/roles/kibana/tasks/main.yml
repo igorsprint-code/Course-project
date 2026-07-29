@@ -1,26 +1,26 @@
 
-    - name: install kibana
-      apt:
-        deb: https://mirror.yandex.ru/mirrors/elastic/8/pool/main/k/kibana/kibana-8.12.2-amd64.deb
-        state: present
+- name: install kibana
+  ansible.builtin.apt:
+    deb: https://mirror.yandex.ru/mirrors/elastic/8/pool/main/k/kibana/kibana-8.12.2-amd64.deb
+    state: present
 
-    - name: enable kibana
-      systemd:
-        name: kibana.service
-        enabled: true
+- name: enable kibana
+  ansible.builtin.systemd:
+    name: kibana.service
+    enabled: true
 
 
-    - name: start kibana
-      systemd:
-        name: kibana.service
-        state: started
+- name: start kibana
+  ansible.builtin.systemd:
+    name: kibana.service
+    state: started
 
     
-    - name: config kibana
-      template:
-        src: kibana.yml.j2
-        dest: /etc/kibana/kibana.yml
-      notify: restart kibana
+- name: config kibana
+  ansible.builtin.template:
+    src: kibana.yml.j2
+    dest: /etc/kibana/kibana.yml
+  notify: restart kibana
         
 
     

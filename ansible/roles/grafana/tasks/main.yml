@@ -1,35 +1,35 @@
 
 - name: install grafana
-  apt:
+  ansible.builtin.apt:
     deb: https://github.com/grafana/grafana/releases/download/v13.1.0/grafana_13.1.0_28013217238_linux_amd64.deb
     state: present
        
 - name: enable grafana
-  systemd:
+  ansible.builtin.systemd:
     name: grafana-server
     enabled: yes
 
 - name: start grafana
-  systemd:
+  ansible.builtin.systemd:
     state: started
     name: grafana-server
 
 - name: config grafana
-  template:
+  ansible.builtin.template:
     src: sample.yaml.j2
     dest: /etc/grafana/provisioning/datasources/sample.yaml
   notify: 
     - restart grafana
           
 - name: config dashboard
-  copy:
+  ansible.builtin.copy:
     src: ./files/dashboard.yml
     dest: /etc/grafana/provisioning/dashboards/sample.yaml
   notify: 
     - restart grafana
 
 - name: create dashboard dir
-  file:
+  ansible.builtin.file:
     path: /var/lib/grafana/dashboards
     state: directory
     owner: grafana
@@ -39,7 +39,7 @@
 
 
 - name: import dashboard
-  copy:
+  ansible.builtin.copy:
     src: ./files/dashboard_threshold.json
     dest: /var/lib/grafana/dashboards/
     owner: grafana

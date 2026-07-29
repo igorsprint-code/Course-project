@@ -31,34 +31,40 @@ resource "yandex_vpc_security_group" "web_fw" {
 
 
   ingress {
-    description    = "Allow HTTPS"
+    description    = "Allow HTTPS from alb"
     protocol       = "TCP"
     port           = 443
-    v4_cidr_blocks = ["0.0.0.0/0"]
+    security_group_id = yandex_vpc_security_group.alb_sg.id 
   }
   ingress {
-    description    = "Allow HTTP"
+    description    = "Allow HTTP from alb"
     protocol       = "TCP"
     port           = 80
-    v4_cidr_blocks = ["0.0.0.0/0"]
+    security_group_id = yandex_vpc_security_group.alb_sg.id 
+  }
+  ingress {
+    description    = "Allow health alb"
+    protocol       = "TCP"
+    port           = 80
+    predefined_target = "loadbalancer_healthchecks" 
   }
   ingress {
     description    = "Allow ssh"
     protocol       = "TCP"
     port           = 22
-    v4_cidr_blocks = ["10.0.0.0/8"]
+    v4_cidr_blocks = ["${yandex_compute_instance.bastion.network_interface.0.ip_address}/32"]
   }
   ingress {
     description    = "Allow log exporter"
     protocol       = "TCP"
     port           = 4040
-    v4_cidr_blocks = ["10.0.0.0/8"]
+    v4_cidr_blocks = ["${yandex_compute_instance.prometheus_vm.network_interface.0.ip_address}/32"]
   }
   ingress {
     description    = "Allow node exporter"
     protocol       = "TCP"
     port           = 9100
-    v4_cidr_blocks = ["10.0.0.0/8"]
+    v4_cidr_blocks = ["${yandex_compute_instance.prometheus_vm.network_interface.0.ip_address}/32"]
   }
   egress {
     description    = "Permit ANY"
@@ -182,3 +188,27 @@ resource "yandex_vpc_security_group" "kibana" {
   }
 
 }
+
+
+# FW для alb
+
+resource "yandex_vpc_security_group" "alb_sg" {
+  name       = "alb_security_group"
+  network_id = yandex_vpc_network.project_net.id
+  ingress {
+    description    = "Allow 0.0.0.0/0"
+    protocol       = "TCP"
+    port           = 80
+    v4_cidr_blocks = ["0.0.0.0/0"]
+  }
+  egress {
+    description    = "Permit ANY"
+    protocol       = "ANY"
+    v4_cidr_blocks = ["0.0.0.0/0"]
+    from_port      = 0
+    to_port        = 65535
+  }
+
+}
+
+

@@ -1,0 +1,4 @@
+cloud_id = "b1gegppm1o1298udt1sl"
+folder_id = "b1gjpour80p6sceb8911"
+ssh_public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFeD+THrvGobFwnMEiSRg5RyEOAVgdwolx2CNQIsGee4 igor@pc"
+admin_ip = "5.18.149.32/32"

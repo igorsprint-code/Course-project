@@ -1,15 +1,15 @@
 - name: daemon reload
-  systemd:
+  ansible.builtin.systemd:
     daemon_reload: yes
 
 - name: restart prometheus
-  service:
+  ansible.builtin.systemd:
     name: prometheus
     state: restarted
 
 
 - name: enable prometheus
-  systemd:
+  ansible.builtin.systemd:
     name: prometheus
     enabled: yes
     masked: no

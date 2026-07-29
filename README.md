@@ -121,7 +121,7 @@ Terraform apply:
 
 Ansible отработал без ошибок:
 
-![ansible](screenshots/ansnginx.png)
+![ansible](screenshots/ansnginx1.png)
 
 На web-сервере работает nginx, прослушивается порт 80:
 

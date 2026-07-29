@@ -231,7 +231,7 @@ Ansible отработал без ошибок:
 
 Ansible отработал без ошибок:
 
-![ansible](screenshots/kibana.png)
+![ansible](screenshots/kibana1.png)
 
 На сервере работает Kibana, прослушивается порт 5601:
 

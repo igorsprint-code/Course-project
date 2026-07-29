@@ -30,12 +30,7 @@ resource "yandex_vpc_security_group" "web_fw" {
   network_id = yandex_vpc_network.project_net.id
 
 
-  ingress {
-    description    = "Allow HTTPS from alb"
-    protocol       = "TCP"
-    port           = 443
-    security_group_id = yandex_vpc_security_group.alb_sg.id 
-  }
+  
   ingress {
     description    = "Allow HTTP from alb"
     protocol       = "TCP"

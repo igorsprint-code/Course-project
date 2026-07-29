@@ -57,17 +57,10 @@ Terraform apply:
 
 ![terraformclear](screenshots/clear/apply.png)
 
-Terraform output:
-
-![terraformclear](screenshots/clear/output.png)
 
 
 
 # Демонстрация работы Terraform
-
-Terraform отработал без ошибок:
-
-![terraformapply](screenshots/terraformapply.png)
 
 
 Созданы все необхдимые ВМ:

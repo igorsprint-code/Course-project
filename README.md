@@ -44,13 +44,10 @@ SSH-ключ задается в файле [cloud-init.yml](/terraform/cloud-in
 
 ![terraformclear](screenshots/clear/check.png)
 
-Terraform init:
+Terraform init, validate:
 
 ![terraformclear](screenshots/clear/init.png)
 
-Terraform validate:
-
-![terraformclear](screenshots/clear/validate.png)
 
 Terraform plan:
 

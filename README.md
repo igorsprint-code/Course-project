@@ -141,7 +141,7 @@ Cтатус сменился на HEALTHY.
 
 Ansible отработал без ошибок:
 
-![ansible](screenshots/nodeex.png)
+![ansible](screenshots/nodeex1.png)
 
 На web-сервере работает node exporter, прослушивается порт 9100:
 
@@ -152,7 +152,7 @@ Ansible отработал без ошибок:
 
 Ansible отработал без ошибок:
 
-![ansible](screenshots/logex.png)
+![ansible](screenshots/logex1.png)
 
 
 На web-сервере работает log_exporter, прослушивается порт 4040:
@@ -164,7 +164,7 @@ Ansible отработал без ошибок:
 
 Ansible отработал без ошибок:
 
-![ansible](screenshots/filebeat.png)
+![ansible](screenshots/filebeat1.png)
 
 
 На web-сервере работает filebeat.
@@ -179,7 +179,7 @@ Ansible отработал без ошибок:
 
 Ansible отработал без ошибок:
 
-![ansible](screenshots/prom.png)
+![ansible](screenshots/prom1.png)
 
 
 На сервере работает Prometheus, прослушивается порт 9090:
@@ -194,7 +194,7 @@ Ansible отработал без ошибок:
 
 Ansible отработал без ошибок:
 
-![ansible](screenshots/grafana.png)
+![ansible](screenshots/grafana1.png)
 
 На сервере работает Grafana, прослушивается порт 3000:
 
@@ -217,7 +217,7 @@ Grafana доступна по ip 62.84.114.98:3000 (login:admin password:admin) 
 
 Ansible отработал без ошибок:
 
-![ansible](screenshots/elastic.png)
+![ansible](screenshots/elastic1.png)
 
 На сервере работает Elasticsearch, прослушивается порт 9200:
 
